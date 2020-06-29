@@ -5,6 +5,10 @@ body {
 }
 
 
+div[id$="-news"]:hover,div[id$="-fav"]:hover{
+	transform: scale(1.05);
+	box-shadow: 1px 4px 2px  black;
+}
 
 .sciences {
 	background-color : rgb(200,50,50);
@@ -59,7 +63,7 @@ footer, footer a {
 }
 
 .news {
-	border : solid thin rgba(200,200,200,0.3);	
+	border : solid 5px rgba(200,200,200,0.3);	
 	border-width : 1px 0px;
 	padding : 2px;
 	line-height : 25px;
@@ -69,10 +73,11 @@ footer, footer a {
 	white-space: nowrap;
 }
 
+
 #favList .news {
 		box-shadow: inset rgba(0,0,0,0.5) -50px 0px 30px -20px;
 		text-overflow : ellipsis ;
-	padding-left : 10px;
+	  padding-left : 10px;
 }
 
 #newsList, #favList {
@@ -162,47 +167,10 @@ footer, footer a {
 	border-radius : 10px;
 }
 
+.news :focus{
+	box-shadow: 1px 2px 3px white;
+}
 @media screen and (max-width: 800px) {
 	#favList, #newsList, #newsList input {
 		width : 30%;
 	}
-
-	#favList, #newsList{
-		font-size : 15px;
-	}
-
-  #newsList {
-	  height : 350px;
-	}
-  #newsList div.list {
-  	margin-top : 22px;
-  }
-	#favList {
-		height : 195px;
-    left : 2%;
-    top : 424px;
-		border-top : white 1px solid;
-	}
-	#favList h2   {
-	  text-align : left;
-		font-size : 16px;
-		padding-left : 5px;
-	}
-	#selectedNews {
-		margin-left : 30%;
-	  width : 65%;
-	}
-	
-	#selectedNews figure {
-		display : none;
-	}
-	
-	#selectedNews div#content {
-		padding-top : 0px;
-		font-size : 15px;
-	}
-	
-	#selectedNews h1 { 	
-	 padding-bottom : 0px;
-	}
-}
